@@ -1,14 +1,2 @@
-<div class="container">
-  <div *ngFor="let word of words">{{word}}</div>
-
-</div>
-<div class="container">
-  <p>{{typed}}</p>
-
-</div>
-
-<div class="container">
-
-  <input #box class="input" type="text" (keyup.space)="spaceHandler(); box.value = ''"
-    (keyup)="inputHandler(box.value)">
-</div>
+<app-words-display></app-words-display>
+<app-controls></app-controls>

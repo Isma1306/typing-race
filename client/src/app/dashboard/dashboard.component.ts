@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { WordsApiService } from '../services/words-api.service';
+import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,27 +9,13 @@ import { WordsApiService } from '../services/words-api.service';
 })
 export class DashboardComponent implements OnInit {
 
-
-  public words: string[] = this.wordsApi.words;
-
-  public typed: string = "";
-
-
-
-  constructor(private wordsApi: WordsApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
 
 
   }
 
-  inputHandler(text: string) {
-    this.typed = text;
-  }
 
-  spaceHandler() {
-    this.typed = "";
-
-  }
 
 }

@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngFor="let word of wordsArray">{{word}}&nbsp;</div>
+</div>
+
+
+<div class="container">
+  <div *ngFor="let word of words">{{word}}&nbsp;</div>
+</div>
+
+
+<div class="container">
+  <p *ngFor="let word of typed">{{word}}&nbsp;</p>
+  <p>{{typing | async}}</p>
+</div>
