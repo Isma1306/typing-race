@@ -10,8 +10,8 @@ import { WordsApiService } from 'src/app/services/words-api.service';
 export class WordsDisplayComponent implements OnInit {
   public wordsArray = this.wordsApi.wordsArray;
   public words: string[] = this.wordsApi.words;
-  public typing = this.wordsApi.typing;
-  public typed = this.wordsApi.typed;
+  public typing = this.wordsApi.typing$;
+  public typed = this.wordsApi.typed$;
 
 
 

@@ -9,6 +9,6 @@
 
 
 <div class="container">
-  <p *ngFor="let word of typed">{{word}}&nbsp;</p>
+  <p *ngFor="let word of typed | async">{{word}}&nbsp;</p>
   <p>{{typing | async}}</p>
 </div>
