@@ -1,9 +1,3 @@
-<div class="container">
-
-  <input #input class="input" type="text" (keyup)="inputHandler(input.value)"
-    (keyup.space)="spaceHandler(); input.value = ''">
-</div>
-
-<div class="container">
+<div *ngIf="!this.isRunning" class="container">
   <button (click)="start()">Start!</button>
 </div>
