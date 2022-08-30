@@ -18,13 +18,16 @@ export class ControlsComponent implements OnInit {
   }
 
   @HostListener('document: keyup', ['$event']) inputHandler($event: KeyboardEvent) {
-    if ($event.key === ' ') {
+    if ($event.code === 'Space') {
       this.wordsApi.spaceHandler();
 
-    } if ($event.key === 'Backspace') {
-      this.wordsApi.backSpaceTyping();
+    } else if ($event.code === 'Backspace') {
+      this.wordsApi.backSpaceHandler();
     }
-    else this.wordsApi.setTyping($event.key);
+    else {
+      console.log('$event', $event);
+      this.wordsApi.setTyping($event.key);
+    };
   }
 
   start() {
